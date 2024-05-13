@@ -42,7 +42,7 @@ namespace rnoh {
         LOG(INFO) << "[SvgMarker] renderMarker width=" << width << " height=" << height;
         if(!mAlign.empty()){
             Rect vbRect(mMinX * mScale, mMinY * mScale, (mMinX + mVbWidth) * mScale, (mMinY + mVbHeight) * mScale);
-            OH_Drawing_Matrix* viewBoxMatrix = rhon::ViewBox::getTransform(vbRect, eRect, mAlign, mMeetOrSlice);
+            OH_Drawing_Matrix* viewBoxMatrix = rnoh::ViewBox::getTransform(vbRect, eRect, mAlign, mMeetOrSlice);
             float sx = OH_Drawing_MatrixGetValue(viewBoxMatrix, 0);
             float sy = OH_Drawing_MatrixGetValue(viewBoxMatrix, 4);
             OH_Drawing_MatrixPreScale(markerTransform, sx, sy, static_cast<float>(origin.x), static_cast<float>(origin.y));

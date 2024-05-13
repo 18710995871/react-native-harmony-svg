@@ -13,7 +13,7 @@
 #include <string>
 #include <cmath>
 
-namespace rhon{
+namespace rnoh{
 
 class ViewBox {
 private:
